@@ -1,0 +1,3 @@
+A start from scratch Emacs 24 configuration inspired by what I could
+find on the internet.
+
