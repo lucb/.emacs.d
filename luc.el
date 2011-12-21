@@ -26,6 +26,15 @@
 ;; ===
 ;; Verifier les hooks
 ;;
+
+(add-hook 'luc-code-modes-hook
+          (lambda () (linum-mode 1)))
+
+(add-hook 'ruby-mode-hook
+          (lambda () (run-hooks 'luc-code-modes-hook)))
+(add-hook 'ruby-mode-hook
+          (lambda () (rvm-activate-corresponding-ruby)))
+
 ;; Emacs-Lisp mode...
 (defun my-lisp-mode-hook ()
   (define-key lisp-mode-map "\C-m" 'reindent-then-newline-and-indent)
